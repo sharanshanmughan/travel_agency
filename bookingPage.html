@@ -1,0 +1,123 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Page</title>
+    <link rel="stylesheet" href="bookingPage.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+          <img
+            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148627268.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1724112000&semt=ais_hybrid"
+            alt="Trip"
+          />
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#">Flights</a>
+            </li>
+            <li>
+              <a href="#">Hotels</a>
+            </li>
+            <li>
+              <a href="#">Holidays</a>
+            </li>
+            <li>
+              <a href="#">Visa</a>
+            </li>
+            <li>
+              <a href="#">Cabs</a>
+            </li>
+          </ul>
+        </div>
+        <div class="account-actions">
+          <button>Login / Create Account</button>
+        </div>
+      </header>
+
+    <main>
+        <div class="booking-container">
+            <div class="flight-details">
+                <h2>New Delhi → Bengaluru</h2>
+                <p>Tuesday, Aug 27 &nbsp; | &nbsp; Non Stop &nbsp; | &nbsp; 2h 45m</p>
+                <div class="flight-info">
+                    <img src="airline-logo.png" alt="Akasa Air">
+                    <div>
+                        <p>Akasa Air &nbsp; | &nbsp; QP 1350</p>
+                        <p>22:40 &nbsp; | &nbsp; New Delhi - Indira Gandhi International Airport, Terminal T2</p>
+                        <p>01:25 &nbsp; | &nbsp; Bengaluru - Bengaluru International Airport, Terminal T1</p>
+                        <p>Cabin Baggage: 7 Kgs / Adult &nbsp; | &nbsp; Check-In Baggage: 15 Kgs / Adult</p>
+                    </div>
+                </div>
+                <button class="add-baggage-btn">ADD BAGGAGE</button>
+            </div>
+
+            <div class="fare-summary">
+                <h3>Fare Summary</h3>
+                <p>Base Fare: ₹ 5,431</p>
+                <p>Taxes and Surcharges: ₹ 792</p>
+                <p><strong>Total Amount: ₹ 6,223</strong></p>
+                <div class="promo-codes">
+                    <input type="text" placeholder="Enter promo code here">
+                    <a href="#">VIEW ALL COUPONS</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cancellation-policy">
+            <h3>Cancellation Refund Policy</h3>
+            <div class="policy-details">
+                <div class="policy-info">
+                    <img src="route-icon.png" alt="Route">
+                    <div>
+                        <p>DEL-BLR</p>
+                        <p>Cancellation Penalty:</p>
+                    </div>
+                </div>
+                <div class="refund-bar">
+                    <span class="refund-amount">₹ 4,299</span>
+                    <span class="no-refund">₹ 6,223</span>
+                </div>
+                <p>Cancel Between (IST): Now - 27 Aug, 22:40</p>
+            </div>
+        </div>
+
+        <div class="upgrade-options">
+            <h3>Get more benefits by upgrading your fare</h3>
+            <div class="upgrade-option">
+                <input type="radio" name="fare-option" id="standard">
+                <label for="standard">
+                    <strong>MMT Standard ₹ 6,223</strong>
+                    <ul>
+                        <li>Cancellation fee starts at ₹ 3,999 (up to 2 hours before departure)</li>
+                        <li>Date Change fee starts at ₹ 2,999 up to 2 hrs before departure</li>
+                    </ul>
+                </label>
+            </div>
+            <div class="upgrade-option">
+                <input type="radio" name="fare-option" id="regular">
+                <label for="regular">
+                    <strong>MMT Regular ₹ 6,985</strong>
+                    <ul>
+                        <li>Free cancellation upto 24 hours before departure</li>
+                        <li>Date Change fee starts at ₹ 999 up to 2 hrs before departure</li>
+                    </ul>
+                </label>
+            </div>
+            <div class="upgrade-option recommended">
+                <input type="radio" name="fare-option" id="premium">
+                <label for="premium">
+                    <strong>MMT Premium ₹ 7,055</strong>
+                    <ul>
+                        <li>Free cancellation upto 24 hours before departure</li>
+                        <li>Free date change upto 24 hours before departure</li>
+                    </ul>
+                </label>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

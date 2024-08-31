@@ -1,0 +1,319 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="travel.css">
+</head>
+
+<div class="App">
+      <header class="navbar">
+        <div class="logo">
+          <img
+            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148627268.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1724112000&semt=ais_hybrid"
+            alt="Trip"
+          />
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#">Flights</a>
+            </li>
+            <li>
+              <a href="#">Hotels</a>
+            </li>
+            <li>
+              <a href="#">Holidays</a>
+            </li>
+            <li>
+              <a href="#">Visa</a>
+            </li>
+            <li>
+              <a href="#">Cabs</a>
+            </li>
+          </ul>
+        </div>
+        <div class="account-actions">
+          <button>Login / Create Account</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="booking-section">
+          <div class="booking-form">
+            <form>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="from">From</label>
+                  <div class="dropdown-container" id="dropdown1">
+                    <input
+                      type="text"
+                      id="from"
+                      placeholder="From"
+                      readOnly
+                    />
+                    
+                      <ul class="dropdown-options">
+                        <li onClick="selectOption('from','Option 1')">Option 1</li>
+                        <li onClick="selectOption('from','Option 2')">Option 2</li>
+                        <li onClick="selectOption('from','Option 3'">Option 3</li>
+                        <li onClick="selectOption('from','Option 4')">Option 4</li>
+                      </ul>
+                   
+                  </div>
+                </div>
+                <div class="input-group">
+                  <label for="to">To</label>
+                  <div class="dropdown-container" id="dropdown2"}>
+                    <input
+                      type="text"
+                      id="to"
+                      placeholder="To"
+                      readOnly
+                    />
+                    
+                      <ul class="dropdown-options">
+                        <li onClick="selectOption('to','Option 1')">Option 1</li>
+                        <li onClick="selectOption('to','Option 2')">Option 2</li>
+                        <li onClick="selectOption('to','Option 3')">Option 3</li>
+                        <li onClick="selectOption('to','Option 4')">Option 4</li>
+                      </ul>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="departure">Departure</label>
+                  <input
+                    type="date"
+                    id="departure"
+                    name="departure"
+                    min=""
+                    
+                  />
+                </div>
+                <div class="input-group">
+                  <label for="return">Return</label>
+                  <input
+                    type="date"
+                    id="return"
+                    name="departure"
+                    min=""
+                    
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="input-group">
+                  <label for="travellers">Travellers &amp; Class</label>
+				  <div class="dropdown-container" id="dropdown3">
+                  <input
+                    type="text"
+                    id="travellers"
+                    placeholder="Travellers Class"
+                    readOnly
+                  />
+                  
+                    <ul class="dropdown-options">
+                      <li onClick="selectOption('travellers','Option 1')">Option 1</li>
+                      <li onClick="selectOption('travellers','Option 2')">Option 2</li>
+                      <li onClick="selectOption('travellers','Option 3')">Option 3</li>
+                      <li onClick="selectOption('travellers','Option 4')">Option 4</li>
+                    </ul>
+                
+				  </div>
+                </div>
+              </div>
+
+			  <div class="buttonDiv">
+				  <a href="file:///D:/webdev/packages.html" 
+						type="submit" class="search-button">
+					Search Flights
+				  </a>
+			  </div>
+              
+            </form>
+          </div>
+        </section>
+
+        <section class="offers-section">
+          <h2>Offers</h2>
+          <ul class="offer-tabs">
+            <li class="active" onclick="switchTab('All Offers')"}
+            >
+              <a href="#">All Offers</a>
+            </li>
+            <li
+              onclick="switchTab('Bank Offers')"
+            >
+              <a href="#">Bank Offers</a>
+            </li>
+            <li
+              onclick="switchTab('Flights')"
+            >
+              <a href="#">Flights</a>
+            </li>
+            <li
+              onclick="switchTab('Hotels')"
+            >
+              <a href="#">Hotels</a>
+            </li>
+            <li
+              onclick="switchTab('Holidays')"
+            >
+              <a href="#">Holidays</a>
+            </li>
+
+            <li
+              onclick="switchTab('Visa')"
+            >
+              <a href="#">Visa</a>
+            </li>
+            <li
+              onclick="switchTab('Cabs')"
+            >
+              <a href="#">Cabs</a>
+            </li>
+          </ul>
+
+          <div class="offers-cards">
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2qIOmxQbOlESwIHbSDdd5psadd3G7Gu857A&s"
+                alt="Malaysia Airlines"
+              />
+              <div class="card-content">
+                <h3>LIVE NOW: Sale by Malaysia Airlines</h3>
+                <p>with up to 25% OFF* on fares.</p>
+                <a href="#" class="explore-btn">
+                  EXPLORE NOW
+                </a>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://static.toiimg.com/photo/96586840.cms"
+                alt="Taj Hotel"
+              />
+              <div class="card-content">
+                <h3>Enjoy FLAT 10% Savings* on Stays at the Taj</h3>
+                <p>+ Get a Taj Experience Gift Card worth up to ₹3000.</p>
+                <a href="#" class="book-btn">
+                  BOOK NOW
+                </a>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://assets.entrepreneur.com/content/3x2/2000/20160614064338-Cab.jpeg"
+                alt="Cabs Offer"
+              />
+              <div class="card-content">
+                <h3>Grab up to 17% OFF*</h3>
+                <p>on Buses, Cabs &amp; Trains for Your Rakhi Trip!</p>
+                <a href="#" class="book-btn">
+                  BOOK NOW
+                </a>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="https://www.cardexpert.in/wp-content/uploads/2021/07/icici-hpcl-coral-credit-card.jpg"
+                alt="ICICI Bank"
+              />
+              <div class="card-content">
+                <h3>Grab FLAT 15% OFF* on 3, 4 &amp; 5-Star Stays</h3>
+                <p>For your next international trip.</p>
+                <a href="#" class="details-btn">
+                  VIEW DETAILS
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="flagship-hotels">
+          <h2>Flagship Hotel Stores on MakeMyTrip</h2>
+          <div class="hotel-cards">
+            <div class="hotel-card">
+              <img
+                src="https://static.toiimg.com/photo/96586840.cms"
+                alt="Lemon Tree Hotels"
+              />
+              <span>Lemon Tree Hotels</span>
+            </div>
+            <div class="hotel-card">
+              <img
+                src="https://static.toiimg.com/photo/96586840.cms"
+                alt="WelcomHeritage"
+              />
+              <span>WelcomHeritage</span>
+            </div>
+            <div class="hotel-card">
+              <img
+                src="https://static.toiimg.com/photo/96586840.cms"
+                alt="Wyndham Hotels &amp; Resorts"
+              />
+              <span>Wyndham Hotels &amp; Resorts</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="info-cards">
+          <div class="info-card">
+            <p>
+              Check out our Indian Travel Trends Report. Our trends report
+              2023-24 is out now. Read on for top travel insights.
+            </p>
+          </div>
+          <div class="info-card">
+            <p>
+              Book Flights with Voice Chat! Code: MMTMYRA will be auto-applied
+              for EXTRA discounts!
+            </p>
+          </div>
+          <div class="info-card">
+            <p>
+              Finding Indian Food just got easier! Use newly launched filters to
+              find Indian food during International travel
+            </p>
+          </div>
+        </section>
+
+        <section class="advertisement">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2qIOmxQbOlESwIHbSDdd5psadd3G7Gu857A&s"
+            alt="Changi Airport"
+          />
+          <div class="ad-content">
+            <p>Elevate your Travel Experience with Singapore Changi Airport!</p>
+            <p>Enjoy S$20 E-Voucher &amp; Deals for Shopping &amp; Activities.</p>
+            <button>Know More</button>
+          </div>
+        </section>
+
+        <section class="download-app">
+          <h2>Download App Now !</h2>
+          <p>
+            Use code <strong>WELCOMEMMT</strong> and get{' '}
+            <strong>FLAT 12% OFF*</strong> on your first domestic flight booking
+          </p>
+          <div class="app-buttons">
+            <img src="googleplay.jpg" alt="Google Play" />
+            <img src="appstore.jpg" alt="App Store" />
+            <img src="qrcode.jpg" alt="QR Code" />
+          </div>
+        </section>
+      </main>
+    </div>
+	
+	<script src="script.js"></script>
+	
+	<html/>

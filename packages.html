@@ -1,0 +1,214 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="packages.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+          <img
+            src="https://img.freepik.com/free-vector/detailed-travel-logo_23-2148627268.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1724112000&semt=ais_hybrid"
+            alt="Trip"
+          />
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="#">Flights</a>
+            </li>
+            <li>
+              <a href="#">Hotels</a>
+            </li>
+            <li>
+              <a href="#">Holidays</a>
+            </li>
+            <li>
+              <a href="#">Visa</a>
+            </li>
+            <li>
+              <a href="#">Cabs</a>
+            </li>
+          </ul>
+        </div>
+        <div class="account-actions">
+          <button>Login / Create Account</button>
+        </div>
+      </header>
+    
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <select>
+                    <option value="one-way">One Way</option>
+                    <option value="round-trip">Round Trip</option>
+                </select>
+                <input type="text" placeholder="From: New Delhi, India">
+                <input type="text" placeholder="To: Bengaluru, India">
+                <input type="date" value="2024-08-27">
+                <select>
+                    <option value="regular">Regular</option>
+                    <option value="student">Student</option>
+                    <option value="senior-citizen">Senior Citizen</option>
+                    <option value="armed-forces">Armed Forces</option>
+                    <option value="doctor-nurses">Doctor and Nurses</option>
+                </select>
+                <input type="text" placeholder="Return (Optional)">
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
+    <div style="display:flex">
+		<section class="filters-section">
+			<div class="container">
+				<div class="filters">
+					<h3>Applied Filters</h3>
+					<div class="applied-filter">
+						<span class="filter-label">NON STOP</span>
+						<button class="clear-filter">x</button>
+					</div>
+					<h3>Popular Filters</h3>
+					<div class="filter-group">
+						<label><input type="checkbox" checked> Non Stop</label>
+						<label><input type="checkbox"> IndiGo</label>
+						<label><input type="checkbox"> Morning Departures</label>
+						<label><input type="checkbox"> Late Departures</label>
+						<label><input type="checkbox"> +3 more</label>
+					</div>
+					<h3>One Way Price</h3>
+					<input type="range" min="6223" max="10500" value="6223">
+					<h3>Stops From New Delhi</h3>
+					<label><input type="checkbox" checked> Non Stop</label>
+					<label><input type="checkbox"> 1 Stop</label>
+					<h3>Departure From New Delhi</h3>
+					<div class="departure-times">
+						<button>Before 6AM</button>
+						<button>6AM - 12PM</button>
+						<button>12PM - 6PM</button>
+						<button>After 6PM</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="flights-section">
+			<div class="container">
+				<div class="flight-summary">
+					<div class="summary-option">CHEAPEST<br>₹6,223 | 02h 45m</div>
+					<div class="summary-option">NON STOP FIRST<br>₹6,223 | 02h 45m</div>
+					<div class="summary-option">YOU MAY PREFER<br>₹6,223 | 02h 45m</div>
+				</div>
+
+				<div class="flight-option">
+					<div class="flight-info">
+						<p class="airline">Akasa Air QP 1350</p>
+						<p class="flight-time">22:40 | New Delhi (DEL)</p>
+						<p class="flight-time">01:25 | Bengaluru (BLR) +1 Day</p>
+						<p class="flight-duration">Duration: 02h 45m | Non-stop</p>
+					</div>
+					<div class="flight-price">
+						<p>₹6,223</p>
+						<button class="open-dialog-btn">VIEW PRICES</button>
+					</div>
+					
+					
+					
+					<!--div class="flight-details">
+						<p><strong>Flight Number:</strong> QP 1350</p>
+						<p><strong>Baggage:</strong> 15kg Check-in, 7kg Cabin</p>
+						<p><strong>Services:</strong> In-flight meals, Wi-Fi</p>
+						<p><strong>Aircraft:</strong> Boeing 737 MAX</p>
+					</div-->
+					
+					
+					
+				</div>
+
+				<!--div class="flight-option">
+					<div class="flight-info">
+						<p class="airline">Air India Express IX 1543</p>
+						<p class="flight-time">22:00 | New Delhi (DEL)</p>
+						<p class="flight-time">00:50 | Bengaluru (BLR) +1 Day</p>
+						<p class="flight-duration">Duration: 02h 50m | Non-stop</p>
+					</div>
+					<div class="flight-price">
+						<p>₹6,236</p>
+						<button class="open-dialog-btn">VIEW PRICES</button>
+					</div>
+					<div class="flight-details">
+						<p><strong>Flight Number:</strong> IX 1543</p>
+						<p><strong>Baggage:</strong> 20kg Check-in, 7kg Cabin</p>
+						<p><strong>Services:</strong> In-flight meals</p>
+						<p><strong>Aircraft:</strong> Airbus A320</p>
+					</div>
+				</div-->
+
+				<!-- Add more flight options similarly -->
+			</div>
+		</div>
+		<div class="dialog-overlay" id="dialog-overlay"></div>
+
+    <!-- Dialog Box -->
+		<div class="dialog-box" id="dialog-box">
+			<button class="close-dialog-btn" id="close-dialog-btn">X</button>
+			<div class="dialog-header">3 FARE OPTIONS available for your trip.</div>
+			<div class="fare-options">
+				<div class="fare-option">
+					<div class="price">₹ 6,223 <span>per adult</span></div>
+					<h3>SAVER</h3>
+					<p><strong>Baggage:</strong></p>
+					<p>✔ 7 Kgs Cabin Baggage</p>
+					<p>✔ 15 Kgs Check-in Baggage</p>
+					<p><strong>Flexibility:</strong></p>
+					<p>● Cancellation fee starts at ₹ 3,999 (up to 2 hours before departure)</p>
+					<p>● Date Change fee starts at ₹ 2,999 up to 2 hrs before departure</p>
+					<p><strong>Seats, Meals & More:</strong></p>
+					<p>● Chargeable Seats</p>
+					<p>● Chargeable Meals</p>
+					<div class="cta-buttons">
+						<button class="lock-now">LOCK NOW</button>
+						<a href="file:///D:/webdev/bookingPage.html" class="book-now">BOOK NOW</a>
+					</div>
+				</div>
+				<div class="fare-option">
+					<div class="price">₹ 6,666 <span>per adult</span></div>
+					<h3>FARE BY MAKEMYTRIP</h3>
+					<p><strong>Baggage:</strong></p>
+					<p>✔ 7 Kgs Cabin Baggage</p>
+					<p>✔ 15 Kgs Check-in Baggage</p>
+					<p><strong>Flexibility:</strong></p>
+					<p>● Free Cancellation</p>
+					<p>● Free Date Change</p>
+					<p><strong>Seats, Meals & More:</strong></p>
+					<p>● Chargeable Seats</p>
+					<p>● Chargeable Meals</p>
+					<div class="benefits">BENEFITS WORTH ₹ 3,999 INCLUDED</div>
+					<div class="cta-buttons">
+						<a href="file:///D:/webdev/bookingPage.html" class="book-now">BOOK NOW</a>
+					</div>
+				</div>
+				<div class="fare-option">
+					<div class="price">₹ 6,674 <span>per adult</span></div>
+					<h3>FLEXI</h3>
+					<p><strong>Baggage:</strong></p>
+					<p>✔ 7 Kgs Cabin Baggage</p>
+					<p>✔ 15 Kgs Check-in Baggage</p>
+					<p><strong>Flexibility:</strong></p>
+					<p>● Lower Cancellation fee of ₹ 2,999 (up to 2 hours before departure)</p>
+					<p>● Lower Date Change fee of ₹ 999 up to 2 hrs before departure</p>
+					<p><strong>Seats, Meals & More:</strong></p>
+					<p>✔ Free Seats</p>
+					<p>✔ Complimentary Meals</p>
+					<div class="cta-buttons">
+						<button class="lock-now">LOCK NOW</button>
+						<a href="file:///D:/webdev/bookingPage.html" class="book-now">BOOK NOW</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="packagesScript.js"></script>
+</body>
+</html>
